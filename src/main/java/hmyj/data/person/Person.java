@@ -18,35 +18,35 @@ public abstract class Person {
     private int age;
     private Hometown hometown;
 
-    protected int getID() {
+    public int getID() {
         return this.ID;
     }
 
-    protected void setID(int ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 
-    protected int getAge() {
+    public int getAge() {
         return this.age;
     }
 
-    protected void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    protected String getName() {
+    public String getName() {
         return this.name;
     }
 
-    protected void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    protected Hometown getHometown() {
+    public Hometown getHometown() {
         return this.hometown;
     }
 
-    protected void setHometown(Hometown hometown) {
+    public void setHometown(Hometown hometown) {
         this.hometown = hometown;
     }
 }

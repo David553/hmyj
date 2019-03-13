@@ -6,13 +6,26 @@
  */
 package hmyj.data.material;
 
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+
 /**
  * @author xiechao01
  */
+@Component
 public class Cloth extends Matrial {
-//TODO: 封装API
-    @Override
-    public int getPrice(){
-        return super.getPrice();
+
+    private static final String CLOTH = "cloth";
+
+    public Cloth getClothByName(String name) throws IllegalArgumentException {
+
+        try {
+            if (Cloth.CLOTH.equals(name)) {
+                return this;
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("illegal argument for getClothByName " + e);
+        }
+        return null;
     }
 }

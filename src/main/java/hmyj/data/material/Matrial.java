@@ -6,20 +6,34 @@
  */
 package hmyj.data.material;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author xiechao01
  */
+@Component
 public abstract class Matrial {
 
-    private int price;
+    //购买成本
+    private int purchaseCost;
 
-    protected int getPrice() {
-        return this.price;
+    private int transferCost;
+
+    public int getPurchaseCost() {
+        return this.purchaseCost;
     }
 
-    protected void setPrice(int price) {
-        this.price = price;
+    public void setPurchaseCost(int purchaseCost) {
+        this.purchaseCost = purchaseCost;
     }
 
-    //TODO: 范型的枚举类型
+    public int getTransferCost() {
+        return this.transferCost;
+    }
+
+    public void setTransferCost(int transferCost) {
+        this.transferCost = transferCost;
+    }
+
+    //TODO: 范型的枚举类型---在每个matrial类中分别做更合适
 }

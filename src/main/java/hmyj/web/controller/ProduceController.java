@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author xiechao01
  */
 @RestController
-public class SignInController {
+public class ProduceController {
 
     @GetMapping("/testURL")
     public String makeCloth(){
@@ -25,6 +25,5 @@ public class SignInController {
 
         return " make cloth";
     }
-
 
 }

@@ -6,13 +6,22 @@
  */
 package hmyj.data.person;
 
+import hmyj.data.material.Cloth;
+import hmyj.data.material.Matrial;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  * @author xiechao01
  */
+@Component
 public class Producer extends Person {
-    //TODO: 封装API
-    @Override
-    public int getID(){
-        return super.getID();
+
+    private Cloth cloth;
+
+    @Autowired
+    public void butMaterial(Cloth cloth) {
+        this.cloth = cloth;
+        System.out.println("buy this cloth need :" + cloth.getPurchaseCost());
     }
 }
